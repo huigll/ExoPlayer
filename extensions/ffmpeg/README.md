@@ -46,7 +46,7 @@ HOST_PLATFORM="linux-x86_64"
   formats.
 
 ```
-ENABLED_DECODERS=(vorbis opus flac)
+ENABLED_DECODERS=(vorbis opus flac h264 hevc)
 ```
 
 * Fetch and build FFmpeg. For example, executing script `build_ffmpeg.sh` will
