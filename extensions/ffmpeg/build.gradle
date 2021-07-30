@@ -48,3 +48,17 @@ ext {
     javadocTitle = 'FFmpeg extension'
 }
 apply from: '../../javadoc_library.gradle'
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: private_release) {
+                authentication(userName: private_username, password: private_password)
+                pom.groupId = "carbitcast"
+                pom.artifactId = "FFmpeg-extension"
+                pom.version = '1.0.0'
+            }
+        }
+    }
+}

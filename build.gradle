@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 buildscript {
+    apply from: "mavenconfig.gradle"
     repositories {
         google()
         jcenter()
+        maven { url private_release }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
@@ -26,6 +28,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url private_release }
     }
     project.ext {
         exoplayerPublishEnabled = false

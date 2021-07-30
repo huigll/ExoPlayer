@@ -29,7 +29,7 @@ android {
 
     buildTypes {
         debug {
-            testCoverageEnabled = true
+            //testCoverageEnabled = true
         }
     }
 
@@ -55,3 +55,17 @@ ext {
     releaseDescription = 'The ExoPlayer library HLS module.'
 }
 apply from: '../../publish.gradle'
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: private_release) {
+                authentication(userName: private_username, password: private_password)
+                pom.groupId = "com.google.android.exoplayer"
+                pom.artifactId = "library-hls"
+                pom.version = '1.0.0'
+            }
+        }
+    }
+}
