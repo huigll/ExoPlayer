@@ -64,7 +64,7 @@ uploadArchives {
                 authentication(userName: private_username, password: private_password)
                 pom.groupId = "com.google.android.exoplayer"
                 pom.artifactId = "library-dash"
-                pom.version = '1.0.0'
+                pom.version = '1.0.1'
             }
         }
     }
