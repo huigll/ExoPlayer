@@ -57,14 +57,14 @@ dependencies {
     androidTestImplementation 'com.linkedin.dexmaker:dexmaker:' + dexmakerVersion
     androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito:' + dexmakerVersion
     androidTestImplementation 'org.mockito:mockito-core:' + mockitoVersion
-    androidTestImplementation project(modulePrefix + 'testutils')
+    //androidTestImplementation project(modulePrefix + 'testutils')
     testImplementation 'androidx.test:core:' + androidxTestCoreVersion
     testImplementation 'androidx.test.ext:junit:' + androidxTestJUnitVersion
     testImplementation 'com.google.truth:truth:' + truthVersion
     testImplementation 'com.google.guava:guava:' + guavaVersion
     testImplementation 'org.mockito:mockito-core:' + mockitoVersion
     testImplementation 'org.robolectric:robolectric:' + robolectricVersion
-    testImplementation project(modulePrefix + 'testutils')
+    //testImplementation project(modulePrefix + 'testutils')
 }
 
 ext {
@@ -86,7 +86,7 @@ uploadArchives {
                 authentication(userName: private_username, password: private_password)
                 pom.groupId = "com.google.android.exoplayer"
                 pom.artifactId = "library-core"
-                pom.version = '1.0.1'
+                pom.version = '1.0.2'
             }
         }
     }
